@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(./bgimg.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+@media (min-width: 330px) {
+    .container {
+        max-width: 330px;
+    }
+    
+}
+
+@media (min-width: 475px) {
+    .container {
+        max-width: 475px;
+    }
+    
+}
+
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+    
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+    
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+    
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+    
+}
+
+.header{
+    height: 70px;
+}
+
+.nav {
+    
+}
+
+h1{
+    float: left;
+    display: inline;
+    font-size: 30px;
+    padding: 20px;
+    
+    background-color: transparent;
+    color: white;
+    
+    
+}
+
+h1:hover {
+    background-color: transparent;
+    color: blue;
+}
+
+ul{
+    float: right;
+    font-size: 17px;
+    padding: 20px;
+    word-spacing: 30px;
+    
+}
+
+@media (max-width: 650px) {
+    .menu:checked ~ ul{
+        left: 0;
+    }
+
+    ul {
+        display: none;
+    }
+    
+}
+
+li{
+    display: inline-block;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    
+
+}
+
+li:hover {
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+.midder{
+    margin: 7% 0 0 0;
+    padding: 5%;
+    text-align: center;
+}
+
+p{
+    color: white;
+    font-size: 20px;
+    margin: 0 0 15px 0;
+}
+
+button{
+    background-color: black;
+    color: white;
+    width: 25%;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+.menu{
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative;
+    
+
+}
+
+.side{
+    height: 5px;
+    width: 100%;
+    background-color: blue;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+    
+}
+
+.menu span:nth-last-child(1) {
+    top: 25%;
+}
+
+.menu span:nth-last-child(3) {
+    top: 75%;
+}
+
+.menu.active span:nth-last-child(1){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.menu.active span:nth-last-child(2){
+    opacity: 0;
+}
+
+.menu.active span:nth-last-child(3){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
